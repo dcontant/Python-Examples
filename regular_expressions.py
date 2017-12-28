@@ -46,9 +46,9 @@ def print_match(m):
     # be True if a match exists and False if it doesn't. We will print the 
     # match if it exists.
     if m:
-        print m.group(0)
+        print( m.group(0))
     else:
-        print "Nothing to print."
+        print ("Nothing to print.")
 
 
 #-----------------------------------------------------------------------------
@@ -76,22 +76,22 @@ print_match(m3)
 # findall() returns a list containing all the matching non-overlapping strings
 # find all occurrences of 'ow' in str2
 m4 = re.findall(r'ow', str2)
-print m4
+print( m4)
 
 # find all occurrences of two digits followed by one or more whitespace
 # characters (space or tab).
 m5 = re.findall(r'\d\d', str3)
-print m5
+print( m5)
 
 # find all occurrences of two digits followed by one or more spaces. Capture
 # the digits in a group. This will return a list of all the digits. Notice
 # that 55 is not in the list because 55 is not followed by whitespace.
 m6 = re.findall(r'(\d\d)\s+', str3)
-print m6
+print( m6)
 
 # same as above but put the digits in one group and the spaces in another.
 # This will return a list of tuples. Each tuple will have the digits and 
 # the spaces. Again, 55 will not be in this list because it is not followed
 # by whitespace.
 m7 = re.findall(r'(\d\d)(\s+)', str3)
-print m7
+print( m7)
